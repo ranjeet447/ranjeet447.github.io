@@ -141,7 +141,7 @@
 		                    <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="6" required="" aria-required="true"></textarea>
 		                </div>
 		                 <div class="form-group col-12">
-		                    <button type="submit" class="btn btn-block btn-primary py-2">Send It</button>
+		                    <button type="submit" id="submit-form-btn" class="btn btn-block btn-primary py-2">Send It</button>
 		                </div>                           
 		            </div><!--//form-row-->
 		        </form>
@@ -172,7 +172,9 @@
 	<script>
 		var submitted=true;
 		function redirect(){
+			$("#submit-form-btn").attr("disabled", true);
 			if(submitted) {window.location='http://ranjeet447.github.io';}
+			$("#submit-form-btn").attr("disabled", false);
 		}
 	</script>
 
