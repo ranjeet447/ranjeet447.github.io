@@ -120,9 +120,12 @@
 			                <!--<li class="list-inline-item"><a class="instagram" href="#"><i class="fab fa-instagram fa-fw"></i></a></li>-->
 			            </ul><!--//social-list-->
 			        </div>
-			        
+					
+					
+				<!--Update the URL for thank you page on form submit -->
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="redirect()"></iframe> 
 		        </div><!--//contact-intro-->
-		        <form id="contact-form" class="contact-form col-lg-8 mx-lg-auto" method="post" action="">
+		        <form id="contact-form" class="contact-form col-lg-8 mx-lg-auto" method="POST" target="hidden_iframe" action="https://script.google.com/macros/s/AKfycbyYzzmYez-eZdKPbcAM7SlCif5_FPVv-y85ti96/exec" onsubmit="submitted==true">
 			        <h3 class="text-center mb-3">Get In Touch</h3>
 			        <div class="form-row">                                                           
 		                <div class="form-group col-md-6">
@@ -165,7 +168,13 @@
 
     <!-- Custom JS -->
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <script type="text/javascript" src="assets/js/form.js"></script>
+	<script type="text/javascript" src="assets/js/form.js"></script>
+	<script>
+		var submitted=true;
+		function redirect(){
+			if(submitted) {window.location='http://ranjeet447.github.io';}
+		}
+	</script>
 
 </body>
 </html> 
