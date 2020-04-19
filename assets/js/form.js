@@ -16,6 +16,9 @@ $(document).ready(function() {
 				required: 'Please enter your message' //You can customise this message
 			}
 			
+		},
+		invalidHandler: function(event, validator){
+			$('#submit-form-btn').attr('disabled', false);
 		}
 		
 	});
